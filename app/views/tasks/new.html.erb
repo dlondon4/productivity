@@ -1,0 +1,141 @@
+<div class="page-header">
+  <h1>Add Task</h1>
+</div>
+
+<% if @task.errors.any? %>
+  <% @task.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+
+<form action="/create_task" class="form-horizontal">
+  <!-- Label and input for user_id -->
+  <div class="form-group">
+    <label for="user_id" class="col-sm-2 control-label">
+      User
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @task.user_id %>">
+    </div>
+  </div>
+
+  <!-- Label and input for name -->
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">
+      Name
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @task.name %>">
+    </div>
+  </div>
+
+  <!-- Label and input for category_id -->
+  <div class="form-group">
+    <label for="category_id" class="col-sm-2 control-label">
+      Category
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="category_id" name="category_id" placeholder="Category" class="form-control" value="<%= @task.category_id %>">
+    </div>
+  </div>
+
+  <!-- Label and input for date -->
+  <div class="form-group">
+    <label for="date" class="col-sm-2 control-label">
+      Date
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="date" name="date" placeholder="Date" class="form-control" value="<%= @task.date %>">
+    </div>
+  </div>
+
+  <!-- Label and input for time -->
+  <div class="form-group">
+    <label for="time" class="col-sm-2 control-label">
+      Time
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="time" name="time" placeholder="Time" class="form-control" value="<%= @task.time %>">
+    </div>
+  </div>
+
+  <!-- Label and input for length -->
+  <div class="form-group">
+    <label for="length" class="col-sm-2 control-label">
+      Length
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="length" name="length" placeholder="Length" class="form-control" value="<%= @task.length %>">
+    </div>
+  </div>
+
+  <!-- Label and input for order -->
+  <div class="form-group">
+    <label for="order" class="col-sm-2 control-label">
+      Order
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="order" name="order" placeholder="Order" class="form-control" value="<%= @task.order %>">
+    </div>
+  </div>
+
+  <!-- Label and input for priority -->
+  <div class="form-group">
+    <label for="priority" class="col-sm-2 control-label">
+      Priority
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="priority" name="priority" placeholder="Priority" class="form-control" value="<%= @task.priority %>">
+    </div>
+  </div>
+
+  <!-- Label and input for repeat -->
+  <div class="form-group">
+    <label for="repeat" class="col-sm-2 control-label">
+      Repeat
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="repeat" name="repeat" placeholder="Repeat" class="form-control" value="<%= @task.repeat %>">
+    </div>
+  </div>
+
+  <!-- Label and input for notes -->
+  <div class="form-group">
+    <label for="notes" class="col-sm-2 control-label">
+      Notes
+    </label>
+    <div class="col-sm-10">
+      <textarea id="notes" name="notes" placeholder="Notes" class="form-control" rows="3"><%= @task.notes %></textarea>
+    </div>
+  </div>
+
+  <!-- Label and input for status -->
+  <div class="form-group">
+    <label for="status" class="col-sm-2 control-label">
+      Status
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="status" name="status" placeholder="Status" class="form-control" value="<%= @task.status %>">
+    </div>
+  </div>
+
+  <!-- Label and input for date_complete -->
+  <div class="form-group">
+    <label for="date_complete" class="col-sm-2 control-label">
+      Date complete
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="date_complete" name="date_complete" placeholder="Date complete" class="form-control" value="<%= @task.date_complete %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Create Task" class="btn btn-primary">
+    </div>
+  </div>
+</form>
