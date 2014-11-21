@@ -1,4 +1,38 @@
 Rails.application.routes.draw do
+  # Routes for the Category resource:
+  # CREATE
+  get('/categories/new', { :controller => 'categories', :action => 'new' })
+  get('/create_category', { :controller => 'categories', :action => 'create' })
+
+  # READ
+  get('/categories', { :controller => 'categories', :action => 'index' })
+  get('/categories/:id', { :controller => 'categories', :action => 'show' })
+
+  # UPDATE
+  get('/categories/:id/edit', { :controller => 'categories', :action => 'edit' })
+  get('/update_category/:id', { :controller => 'categories', :action => 'update' })
+
+  # DELETE
+  get('/delete_category/:id', { :controller => 'categories', :action => 'destroy' })
+  #------------------------------
+
+  # Routes for the User resource:
+  # CREATE
+  get('/users/new', { :controller => 'users', :action => 'new' })
+  get('/create_user', { :controller => 'users', :action => 'create' })
+
+  # READ
+  get('/users', { :controller => 'users', :action => 'index' })
+  get('/users/:id', { :controller => 'users', :action => 'show' })
+
+  # UPDATE
+  get('/users/:id/edit', { :controller => 'users', :action => 'edit' })
+  get('/update_user/:id', { :controller => 'users', :action => 'update' })
+
+  # DELETE
+  get('/delete_user/:id', { :controller => 'users', :action => 'destroy' })
+  #------------------------------
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
