@@ -52,7 +52,6 @@ class TasksController < ApplicationController
     @task.notes = params[:notes]
     @task.status = params[:status]
     @task.date_complete = params[:date_complete]
-
     if @task.save
       redirect_to "/tasks", :notice => "Task updated successfully."
     else

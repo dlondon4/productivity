@@ -48,7 +48,7 @@
       Date
     </label>
     <div class="col-sm-10">
-      <input type="text" id="date" name="date" placeholder="Date" class="form-control" value="<%= @task.date %>">
+      <input type="text" id="date" name="date" placeholder="Date" class="form-control" data-provide='datepicker' value="<%= @task.date %>">
     </div>
   </div>
 
@@ -138,3 +138,12 @@
     </div>
   </div>
 </form>
+
+<script>
+$(function(){
+  $.datepicker.setDefaults(
+    $.extend($.datepicker.regional[''])
+  );
+  $('#datepicker').datepicker();
+});
+</script>
