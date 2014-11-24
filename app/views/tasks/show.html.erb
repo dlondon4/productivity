@@ -4,13 +4,13 @@
 
 <dl class="dl-horizontal">
   <dt>User</dt>
-  <dd><%= @task.user_id %></dd>
+  <dd><%= @task.user.first_name %> <%= @task.user.last_name %></dd>
 
   <dt>Name</dt>
   <dd><%= @task.name %></dd>
 
   <dt>Category</dt>
-  <dd><%= @task.category_id %></dd>
+  <dd><%= @task.category.name %></dd>
 
   <dt>Date</dt>
   <dd><%= @task.date %></dd>
