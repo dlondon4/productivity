@@ -89,7 +89,18 @@
       Priority
     </label>
     <div class="col-sm-10">
-      <input type="text" id="priority" name="priority" placeholder="Priority" class="form-control" value="<%= @task.priority %>">
+      <!-- <input type="text" id="priority" name="priority" placeholder="Priority" class="form-control" value="<%= @task.priority %>"> -->
+      <div class="col-sm-10">
+          <label class="radio-inline">
+          <input type="radio" name="priority" id="priority1" value="<%= @task.priority %>"> High
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="priority" id="priority2" value="medium"> Medium
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="priority" id="priority3" value="low"> Low
+          </label>
+        </div>
     </div>
   </div>
 
