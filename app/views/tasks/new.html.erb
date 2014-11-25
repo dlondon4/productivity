@@ -69,7 +69,14 @@
       Length
     </label>
     <div class="col-sm-10">
-      <input type="text" id="length" name="length" placeholder="Length" class="form-control" value="<%= @task.length %>">
+      <!-- <input type="text" id="length" name="length" placeholder="Length" class="form-control" value="<%= @task.length %>"> -->
+      <select type="text" class="form-control" id="length" name="length" placeholder="Length">
+            <option value="" disabled selected>Task Length</option>
+            <option>Personal</option>
+            <option>Class</option>
+            <option>Work</option>
+            <option>Other</option>
+          </select>
     </div>
   </div>
 
