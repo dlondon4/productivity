@@ -5,5 +5,6 @@ class Category < ActiveRecord::Base
   validates :name, :presence => true
   validates :user, :presence => true
   validates :name, :uniqueness => { :scope => :user }
-  # validates :user, :uniqueness => { :scope => :order } may require custom validation
+  # validates :user, :uniqueness => { :scope => :order }, :if :order != nil
+
 end
