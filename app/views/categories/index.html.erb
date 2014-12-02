@@ -8,7 +8,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>User</th>
       <th>Order</th>
       <th></th>
       <th></th>
@@ -20,7 +19,6 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td><%= category.user.first_name %></td>
         <td><%= category.order %></td>
         <td>
           <a href="/categories/<%= category.id %>" class="btn btn-primary">
