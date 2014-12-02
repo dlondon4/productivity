@@ -14,13 +14,8 @@
 
 <form action="/create_task" class="form-horizontal">
   <!-- Label and input for user_id -->
-  <div class="form-group">
-    <label for="user_id" class="col-sm-2 control-label">
-      User
-    </label>
-    <div class="col-sm-10">
-      <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :first_name, @task.user_id), :class => "form-control") %>
-    </div>
+  <div>
+    <input type="hidden" name="user_id" class ="form-control" value="<%= current_user.id %>">
   </div>
 
   <!-- Label and input for name -->
