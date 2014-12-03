@@ -8,16 +8,15 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Category<a href="#"> <button type="button" class="btn btn-xs"><i class="fa fa-sort"></i></button></a></th>
-      <th>Date<a href="#"> <button type="button" class="btn btn-xs"><i class="fa fa-sort"></i></button></a></th>
+      <th>Category</th>
+      <th>Date</th>
       <th>Time</th>
       <th>Length</th>
       <th>Order</th>
-      <th>Priority<a href="#"> <button type="button" class="btn btn-xs"><i class="fa fa-sort"></i></button></a></th>
-      <th>Repeat</th>
+      <th>Priority</th>
+      <!-- <th>Repeat</th> -->
       <th>Notes</th>
-      <th>Status</th>
-      <th>Date complete</th>
+      <!-- <th>Date complete</th> -->
       <th></th>
       <th></th>
       <th></th>
@@ -42,10 +41,9 @@
         <td><%= task.length %></td>
         <td><%= task.order %></td>
         <td><%= task.priority %></td>
-        <td><%= task.repeat %></td>
+        <!-- <td><%= task.repeat %></td> -->
         <td><%= task.notes %></td>
-        <td><%= task.status %></td>
-        <td><%= task.date_complete %></td>
+        <!-- <td><%= task.date_complete %></td> -->
         <td>
           <a href="/tasks/<%= task.id %>" class="btn btn-primary">
             <i class="fa fa-search-plus"></i>
