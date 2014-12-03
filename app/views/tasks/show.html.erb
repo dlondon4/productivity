@@ -25,7 +25,21 @@
   </dd>
 
   <dt>Length</dt>
-  <dd><%= @task.length %></dd>
+  <dd>
+    <% if @task.length == 15 %> 15 minutes
+    <% elsif @task.length == 30 %> 30 minutes
+    <% elsif @task.length == 45 %> 45 minutes
+    <% elsif @task.length == 60 %> 1 hour
+    <% elsif @task.length == 90 %> 1.5 hours
+    <% elsif @task.length == 120 %> 2 hours
+    <% elsif @task.length == 150 %> 2.5 hours
+    <% elsif @task.length == 180 %> 3 hours
+    <% elsif @task.length == 210 %> 3.5 hours
+    <% elsif @task.length == 240 %> 4 hours
+    <% elsif @task.length == 270 %> 4.5 hours
+    <% elsif @task.length == 300 %> 5 hours
+    <% end %>
+  </dd>
 
   <dt>Priority</dt>
   <dd>
