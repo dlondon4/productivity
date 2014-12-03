@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   def index
-    @tasks = current_user.tasks
-    @search = Task.search(params[:q])
+    @search = current_user.tasks.search(params[:q])
+    @tasks = @search.result
   end
 
   def show
