@@ -31,9 +31,14 @@
         <td><%= task.category.name %></td>
         <td>
           <% if task.date.present? %>
-            <%= task.date.strftime ('%A, %B %e, %Y') %> <% end %>
+            <%= task.date.strftime ('%A, %B %e, %Y') %>
+          <% end %>
         </td>
-        <td><%= task.time %></td>
+        <td>
+          <% if task.time.present? %>
+            <%= task.time.strftime ('%I:%M%P') %>
+          <% end %>
+        </td>
         <td><%= task.length %></td>
         <td><%= task.order %></td>
         <td><%= task.priority %></td>

@@ -18,7 +18,11 @@
   </dd>
 
   <dt>Time</dt>
-  <dd><%= @task.time %></dd>
+  <dd>
+    <% if @task.time.present? %>
+      <%= @task.time.strftime ('%I:%M%P') %>
+    <% end %>
+  </dd>
 
   <dt>Length</dt>
   <dd><%= @task.length %></dd>
