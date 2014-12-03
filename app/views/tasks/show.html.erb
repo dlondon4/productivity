@@ -28,7 +28,15 @@
   <dd><%= @task.length %></dd>
 
   <dt>Priority</dt>
-  <dd><%= @task.priority %></dd>
+  <dd>
+    <% if @task.priority == 1 %>
+      High
+    <% elsif @task.priority == 2 %>
+      Medium
+    <% elsif @task.priority == 3 %>
+      Low
+    <% end %>
+  </dd>
 
   <dt>Order</dt>
   <dd><%= @task.order %></dd>

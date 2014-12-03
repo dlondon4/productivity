@@ -40,7 +40,15 @@
         </td>
         <td><%= task.length %></td>
         <td><%= task.order %></td>
-        <td><%= task.priority %></td>
+        <td>
+          <% if task.priority == 1 %>
+            High
+          <% elsif task.priority == 2 %>
+            Medium
+          <% elsif task.priority == 3 %>
+            Low
+          <% end %>
+        </td>
         <!-- <td><%= task.repeat %></td> -->
         <td><%= task.notes %></td>
         <!-- <td><%= task.date_complete %></td> -->
