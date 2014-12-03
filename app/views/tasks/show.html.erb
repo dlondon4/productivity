@@ -11,7 +11,11 @@
   <dd><%= @task.category.name %></dd>
 
   <dt>Date</dt>
-  <dd><%= @task.date %></dd>
+  <dd>
+    <% if @task.date.present? %>
+      <%= @task.date.strftime ('%A, %B %e, %Y') %>
+    <% end %>
+  </dd>
 
   <dt>Time</dt>
   <dd><%= @task.time %></dd>
