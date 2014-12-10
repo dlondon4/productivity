@@ -43,7 +43,7 @@
       Date
     </label>
     <div class="col-sm-10">
-      <input type="text" id="date" name="date" placeholder="Date" class="form-control" data-provide='datepicker' value="<%= @task.date %>">
+      <input type="text" id="date" name="date" placeholder="Date" class="form-control datepicker" value="<%= @task.date %>">
     </div>
   </div>
 
@@ -88,16 +88,14 @@
       Priority
     </label>
     <div class="col-sm-10">
-      <form>
-        <%= radio_button_tag :priority, 1, (true if @task.priority == 1) %>
-        <%= label_tag :priority_1, "High" %>
+      <%= radio_button_tag :priority, 1, (true if @task.priority == 1) %>
+      <%= label_tag :priority_1, "High" %>
 
-        <%= radio_button_tag :priority, 2, (true if @task.priority == 2) %>
-        <%= label_tag :priority_2, "Medium" %>
+      <%= radio_button_tag :priority, 2, (true if @task.priority == 2) %>
+      <%= label_tag :priority_2, "Medium" %>
 
-        <%= radio_button_tag :priority, 3, (true if @task.priority == 3) %>
-        <%= label_tag :priority_3, "Low" %>
-      </form>
+      <%= radio_button_tag :priority, 3, (true if @task.priority == 3) %>
+      <%= label_tag :priority_3, "Low" %>
     </div>
   </div>
 
@@ -149,10 +147,10 @@
 </form>
 
 <script>
-$(function(){
-  $.datepicker.setDefaults(
-    $.extend($.datepicker.regional[''])
-  );
-  $('#datepicker').datepicker();
-});
+// $(function(){
+//   $.datepicker.setDefaults(
+//     $.extend($.datepicker.regional[''])
+//   );
+//   $('#datepicker').datepicker();
+// });
 </script>

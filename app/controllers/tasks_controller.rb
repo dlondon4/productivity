@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   def index
     @search = current_user.tasks.search(params[:q])
     @tasks = @search.result
+    @tasks = @tasks.order("date ASC").order("priority ASC")
   end
 
   def show
