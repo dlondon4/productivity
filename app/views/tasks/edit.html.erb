@@ -88,15 +88,16 @@
       Priority
     </label>
     <div class="col-sm-10">
-      <label class="radio-inline">
-        <input type="radio" name="priority" id="priority1" value="1"> High
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="priority" id="priority2" value="2"> Medium
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="priority" id="priority3" value="3"> Low
-      </label>
+      <form>
+        <%= radio_button_tag :priority, 1, (true if @task.priority == 1) %>
+        <%= label_tag :priority_1, "High" %>
+
+        <%= radio_button_tag :priority, 2, (true if @task.priority == 2) %>
+        <%= label_tag :priority_2, "Medium" %>
+
+        <%= radio_button_tag :priority, 3, (true if @task.priority == 3) %>
+        <%= label_tag :priority_3, "Low" %>
+      </form>
     </div>
   </div>
 
