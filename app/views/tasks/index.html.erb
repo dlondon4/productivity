@@ -23,12 +23,15 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody data-link="row" class="rowlink">
     <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.name %></td>
-        <td><%= task.category.name %></td>
-        <td>
+    <tr>
+      <td>
+        <a href="/tasks/<%= task.id %>" target="_self">
+          <%= task.name %></a>
+      </td>
+      <td><%= task.category.name %></td>
+      <td>
           <% if task.date.present? %>
             <%= task.date.strftime ('%A, %B %e, %Y') %>
           <% end %>
@@ -66,11 +69,6 @@
         <!-- <td><%= task.repeat %></td> -->
         <td><%= task.notes %></td>
         <!-- <td><%= task.date_complete %></td> -->
-        <td>
-          <a href="/tasks/<%= task.id %>" class="btn btn-primary">
-            <i class="fa fa-search-plus"></i>
-          </a>
-        </td>
         <td>
           <a href="/tasks/<%= task.id %>/edit" class="btn btn-warning">
             <i class="fa fa-edit"></i>
